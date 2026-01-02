@@ -22,6 +22,17 @@ Input: nums = [5,1,5,2,5,3,5,4]
 Output: 5
 */
 
+/*
+ SOLUTION
+We can solve this problem by using a Set to keep track of the elements we have seen so far. 
+As we iterate through the nums array, we check if the current element is already in the Set. 
+If it is, we return that element as it is the one that is repeated n times. 
+If it is not in the Set, we add it to the Set and continue iterating.
+
+This approach ensures that we find the repeated element in a single pass through the array, 
+resulting in a time complexity of O(n) and a space complexity of O(n) in the worst case.
+*/
+
 const repeatedNTimes = (nums) => {
   const numSet = new Set();
 
